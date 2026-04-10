@@ -6,7 +6,6 @@ import type { TexasHoldemState } from '@carbon-arena/engine';
 import type { TexasHoldemAction } from '@carbon-arena/engine';
 import { TexasHoldemHUPlugin } from '@carbon-arena/engine';
 import { getPluginFactory, getRegisteredGameTypes } from '../services/plugin-registry';
-import { EngineCore } from '@carbon-arena/engine';
 
 const texasPlugin = new TexasHoldemHUPlugin();
 

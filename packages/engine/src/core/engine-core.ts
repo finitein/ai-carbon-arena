@@ -58,10 +58,12 @@ export class EngineCore<S extends GameState, A extends GameAction> {
     // Validate the action is legal
     const legalActions = this.plugin.getLegalActions(this.state, playerId);
     const isLegal = legalActions.some((legal) => {
-      if ((legal as any).type !== (action as any).type) return false;
+      const legalRecord = legal as Record<string, unknown>;
+      const actionRecord = action as Record<string, unknown>;
+      if (legalRecord.type !== actionRecord.type) return false;
       for (const key of Object.keys(legal)) {
-        const legalVal = (legal as any)[key];
-        const actionVal = (action as any)[key];
+        const legalVal = legalRecord[key];
+        const actionVal = actionRecord[key];
         if (typeof legalVal === 'string' && legalVal === '') {
           if (actionVal !== undefined && typeof actionVal !== 'string') return false;
         } else if (JSON.stringify(legalVal) !== JSON.stringify(actionVal)) {

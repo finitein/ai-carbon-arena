@@ -396,7 +396,7 @@ export class TexasHoldemHUPlugin
 
   /** Advance to the next phase */
   private advancePhase(state: TexasHoldemState): TexasHoldemState {
-    let newState = deepClone(state);
+    const newState = deepClone(state);
 
     // Reset per-round state
     for (const player of newState.players) {

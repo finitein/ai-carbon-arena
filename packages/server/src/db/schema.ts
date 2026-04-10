@@ -8,7 +8,6 @@ import {
   bigint,
   jsonb,
   index,
-  uniqueIndex,
   unique,
 } from 'drizzle-orm/pg-core';
 

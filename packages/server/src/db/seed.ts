@@ -18,7 +18,7 @@ const sqlite = new Database(DB_PATH);
 sqlite.pragma('journal_mode = WAL');
 sqlite.pragma('foreign_keys = ON');
 
-const db = drizzle(sqlite, { schema });
+// const db = drizzle(sqlite, { schema });
 
 // ============================================================
 // Create Tables

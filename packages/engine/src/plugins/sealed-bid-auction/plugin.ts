@@ -127,7 +127,7 @@ export class SealedBidAuctionPlugin implements GamePlugin<SealedBidState, Sealed
     const pIdx = state.players.findIndex(p => p.id === playerId);
     if (pIdx !== state.currentPlayerIndex || state.isFinished) return [];
     
-    return [{ type: 'bid' } as any]; // Amount is flexible
+    return [{ type: 'bid', amount: 0 }]; // Amount is flexible
   }
 
   getPlayerView(state: SealedBidState, playerId: string): PlayerView {

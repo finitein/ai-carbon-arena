@@ -92,7 +92,7 @@ export class UltimatumPlugin implements GamePlugin<UltimatumState, UltimatumActi
 
   getLegalActions(state: UltimatumState, _playerId: string): UltimatumAction[] {
     if (state.phase === 'propose') {
-      return [{ type: 'propose' } as any];
+      return [{ type: 'propose', myShare: 0 }];
     }
     if (state.phase === 'respond') {
       return [{ type: 'accept' }, { type: 'reject' }];

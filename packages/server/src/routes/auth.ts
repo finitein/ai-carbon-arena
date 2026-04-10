@@ -3,7 +3,7 @@
 // ============================================================
 
 import type { FastifyInstance } from 'fastify';
-import { AuthService, AuthError } from '../services/auth';
+import { AuthError } from '../services/auth';
 import type { AppContext } from '../app';
 
 export async function authRoutes(app: FastifyInstance): Promise<void> {

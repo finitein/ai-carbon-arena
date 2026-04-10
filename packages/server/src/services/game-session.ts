@@ -4,8 +4,7 @@
 // ============================================================
 
 import { EngineCore } from '@carbon-arena/engine';
-import type { GamePlugin, GameState, GameAction } from '@carbon-arena/engine';
-import type { RoomManager, Room } from './room-manager';
+import type { RoomManager } from './room-manager';
 import type { ReplayLogger } from './replay-logger';
 import { getPluginFactory } from './plugin-registry';
 import { v4 as uuidv4 } from 'uuid';

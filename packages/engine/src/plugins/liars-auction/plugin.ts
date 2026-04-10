@@ -158,7 +158,7 @@ export class LiarsAuctionPlugin implements GamePlugin<LiarsAuctionState, LiarsAu
     if (pIdx !== state.currentPlayerIndex || state.isFinished) return [];
 
     if (state.phase === 'discussion') return [{ type: 'chat', message: '' }, { type: 'end_discussion' }];
-    if (state.phase === 'bidding') return [{ type: 'bid' } as any];
+    if (state.phase === 'bidding') return [{ type: 'bid', amount: 0 }];
     return [];
   }
 

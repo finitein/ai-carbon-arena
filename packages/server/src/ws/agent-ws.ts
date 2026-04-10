@@ -123,6 +123,7 @@ export function setupAgentWebSocket(app: FastifyInstance, ctx: AppContext): void
           // The frontend sends the full action object from getLegalActions()
           const action = payload.action_data || payload;
           // Strip non-action fields
+          // eslint-disable-next-line @typescript-eslint/no-unused-vars
           const { room_id: _rid, hand_num: _hn, action_data: _ad, ...rawAction } = action as Record<string, unknown>;
           
           // If the frontend sent the action inside 'action_data', use that directly

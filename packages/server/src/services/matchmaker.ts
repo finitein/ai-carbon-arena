@@ -5,7 +5,7 @@
 import type { RoomManager, RoomPlayer } from './room-manager';
 import { getRequiredPlayers } from './room-manager';
 import type { GameSessionManager } from './game-session';
-import { randomModel, getLLMBotName, LLM_MODELS } from '../bots/llm-bot';
+import { getLLMBotName, LLM_MODELS } from '../bots/llm-bot';
 
 interface QueueEntry {
   player: RoomPlayer;
